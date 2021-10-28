@@ -2,19 +2,19 @@ version: "2"
 
 services:
   identidock:
-    build: .
-    expose:
+   build: .
+   expose:
     - "9090"
-    environment:
+   environment:
     ENV: PROD 
     #volumes:
     # - ./app:/app
-    links:
+   links:
     - dnmonster
     - redis
 
   dnmonster:
-  image: amouat/dnmonster:1.0
+   image: amouat/dnmonster:1.0
 
   redis:
-  image: redis:3.0
+   image: redis:3.0
